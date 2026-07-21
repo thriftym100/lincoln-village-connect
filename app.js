@@ -2,9 +2,12 @@ const form = document.querySelector("#wifi-form");
 const email = document.querySelector("#email");
 const terms = document.querySelector("#terms");
 const button = document.querySelector("#connect-button");
+const buttonLabel = button.querySelector(".button-label");
 const emailError = document.querySelector("#email-error");
 const termsError = document.querySelector("#terms-error");
 const status = document.querySelector("#form-status");
+const modal = document.querySelector("#success-modal");
+const closeModal = document.querySelector("#close-modal");
 
 function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
@@ -15,6 +18,15 @@ function clearMessages() {
   termsError.textContent = "";
   status.textContent = "";
   status.className = "form-status";
+}
+
+function showModal() {
+  modal.hidden = false;
+  closeModal.focus();
+}
+
+function hideModal() {
+  modal.hidden = true;
 }
 
 form.addEventListener("submit", async (event) => {
@@ -40,16 +52,30 @@ form.addEventListener("submit", async (event) => {
   }
 
   button.disabled = true;
-  button.querySelector("span:last-child").textContent = "Connecting…";
+  buttonLabel.textContent = "Connecting…";
 
-  // Version 1 demo behavior.
-  // In the next phase, this will POST securely to a Cloudflare Pages Function
-  // that adds consenting guests to Mailchimp and authorizes the device in UniFi.
+  // Demonstration only.
+  // The next phase will POST to a secure Cloudflare Pages Function
+  // and then authorize the guest through UniFi.
   await new Promise((resolve) => setTimeout(resolve, 900));
 
-  status.textContent = "Portal form is working. UniFi authorization will be connected in the next phase.";
+  status.textContent = "Form validated successfully.";
   status.classList.add("success");
-
   button.disabled = false;
-  button.querySelector("span:last-child").textContent = "Connect to Free Wi-Fi";
+  buttonLabel.textContent = "Connect to Free Wi-Fi";
+  showModal();
+});
+
+closeModal.addEventListener("click", hideModal);
+
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    hideModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !modal.hidden) {
+    hideModal();
+  }
 });
