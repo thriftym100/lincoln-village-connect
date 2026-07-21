@@ -136,7 +136,7 @@ a {
 .title-block h1 {
   margin: 0;
   color: var(--navy);
-  font-size: clamp(2rem, 5.4vw, 3.25rem);
+  font-size: clamp(1.7rem, 4vw, 2.7rem);
   line-height: 1.12;
   letter-spacing: -0.045em;
 }
