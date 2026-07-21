@@ -600,7 +600,7 @@ footer em {
 
   .portal-card {
     width: calc(100% - 14px);
-    margin-top: -18px;
+    margin-top: 4px;
     padding: 22px 16px 26px;
     border-radius: 22px;
   }
