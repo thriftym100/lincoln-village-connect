@@ -43,22 +43,27 @@ a {
 }
 
 .hero {
-  position: relative;
-  min-height: 345px;
+    position: relative;
+  min-height: 360px;
   display: grid;
   place-items: center;
-  padding: 42px 24px 92px;
+  padding: 20px 24px 70px;
   text-align: center;
+  background:
+    url("images/hero-background.png")
+    center top / cover no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.64) 47%, rgba(255,255,255,.88)),
-    linear-gradient(to bottom, rgba(255,255,255,.08), rgba(255,255,255,.28));
+  background: transparent;
 }
 
+.hero .brand {
+  visibility: hidden;
+
+}
 .brand {
   position: relative;
   z-index: 1;
@@ -135,12 +140,12 @@ a {
 .portal-card {
   position: relative;
   z-index: 2;
-  width: min(calc(100% - 32px), 850px);
-  margin: -58px auto 24px;
-  padding: clamp(27px, 5vw, 54px);
-  border-radius: 38px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
+  width: min(calc(100% - 32px), 760px);
+  margin: -22px auto 24px;
+  padding: 40px 40px 34px;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 24px 70px rgba(3, 38, 85, 0.22);
   text-align: center;
 }
 
@@ -154,6 +159,13 @@ a {
   font-size: 4rem;
   font-weight: 800;
   transform: rotate(90deg);
+}
+
+.wifi-icon {
+    display: inline-block;
+    color: #1988e8;
+    font-size: 2.1rem;
+    transform: none;
 }
 
 .portal-card h2 {
