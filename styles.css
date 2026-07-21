@@ -581,11 +581,14 @@ footer em {
   cursor: pointer;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .hero,
   .hero-spacer {
-    min-height: 285px;
+    min-height: 220px;
+    height: 220px;
   }
+}
+
 
   .portal-card {
     width: calc(100% - 18px);
@@ -609,7 +612,7 @@ footer em {
     align-items: flex-start;
     flex-direction: column;
   }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
   *,
