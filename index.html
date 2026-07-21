@@ -3,10 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lincoln Village Connect</title>
+  <meta name="theme-color" content="#083b78">
+  <meta name="description" content="Lincoln Village Thrifty Wash guest Wi-Fi portal">
+  <title>Lincoln Village Thrifty Wash Guest Wi-Fi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Lincoln Village Thrifty Wash</h1>
-  <p>Guest Wi-Fi portal coming soon.</p>
+  <main class="portal-shell">
+    <section class="hero" aria-label="Lincoln Village Thrifty Wash">
+      <div class="hero-overlay"></div>
+
+      <div class="brand">
+        <div class="washer-logo" aria-hidden="true">
+          <span class="washer-door"></span>
+          <span class="bubble bubble-one"></span>
+          <span class="bubble bubble-two"></span>
+          <span class="bubble bubble-three"></span>
+        </div>
+        <p class="brand-script">Lincoln Village</p>
+        <h1>THRIFTY WASH</h1>
+        <p class="tagline">CLEAN CLOTHES. BETTER DAYS.</p>
+      </div>
+    </section>
+
+    <section class="portal-card" aria-labelledby="portal-title">
+      <div class="wifi-mark" aria-hidden="true">⌁</div>
+
+      <h2 id="portal-title">Welcome to Lincoln Village<br>Thrifty Wash Guest Wi-Fi</h2>
+      <p class="lead">Fast, free Wi-Fi while you wash.</p>
+      <p class="intro">Enter your email, review the terms, and connect.</p>
+
+      <form id="wifi-form" novalidate>
+        <div class="field-group">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            inputmode="email"
+            placeholder="you@example.com"
+            required
+          >
+          <p class="field-error" id="email-error" role="alert"></p>
+        </div>
+
+        <div class="terms-box">
+          <div class="shield" aria-hidden="true">✓</div>
+          <div>
+            <h3>Wi-Fi Terms &amp; Conditions</h3>
+            <p>
+              This network is provided for customers of Lincoln Village
+              Thrifty Wash. Please use it lawfully and responsibly.
+              Availability and speeds may vary.
+            </p>
+          </div>
+        </div>
+
+        <label class="check-row">
+          <input id="terms" name="terms" type="checkbox" required>
+          <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Wi-Fi terms and conditions</a>.</span>
+        </label>
+        <p class="field-error" id="terms-error" role="alert"></p>
+
+        <label class="check-row optional">
+          <input id="marketing" name="marketing" type="checkbox">
+          <span>Send me occasional specials and coupons. I can unsubscribe anytime.</span>
+        </label>
+
+        <button id="connect-button" type="submit">
+          <span class="button-icon" aria-hidden="true">◉</span>
+          <span>Connect to Free Wi-Fi</span>
+        </button>
+
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="reminder">
+        <div class="basket-icon" aria-hidden="true">▤</div>
+        <div>
+          <h3>Today’s Reminder</h3>
+          <p>Ask about our wash-and-fold service and current in-store specials.</p>
+        </div>
+      </aside>
+
+      <nav class="portal-links" aria-label="Legal links">
+        <a href="privacy.html">Privacy</a>
+        <span aria-hidden="true">•</span>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </section>
+
+    <footer>
+      <strong>Lincoln Village Thrifty Wash</strong>
+      <span>Sacramento, CA</span>
+      <em>Clean clothes. Easy connection.</em>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>

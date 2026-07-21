@@ -1,1 +1,436 @@
+* {
+  box-sizing: border-box;
+}
 
+:root {
+  --navy: #062e67;
+  --blue: #1476d4;
+  --bright-blue: #1988e8;
+  --light-blue: #eaf5ff;
+  --line-blue: #b9dcfb;
+  --ink: #0f2340;
+  --muted: #52647a;
+  --surface: rgba(255, 255, 255, 0.97);
+  --shadow: 0 24px 70px rgba(3, 38, 85, 0.22);
+}
+
+html {
+  min-height: 100%;
+  background: #072f67;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Inter", Arial, sans-serif;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)),
+    url("images/splash-background.png") center top / cover fixed no-repeat,
+    linear-gradient(135deg, #dff1ff, #f8fbff 52%, #bddcff);
+}
+
+a {
+  color: #0b65ba;
+}
+
+.portal-shell {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 70px rgba(2, 33, 76, 0.2);
+}
+
+.hero {
+  position: relative;
+  min-height: 345px;
+  display: grid;
+  place-items: center;
+  padding: 42px 24px 92px;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.64) 47%, rgba(255,255,255,.88)),
+    linear-gradient(to bottom, rgba(255,255,255,.08), rgba(255,255,255,.28));
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+}
+
+.washer-logo {
+  position: relative;
+  width: 112px;
+  height: 94px;
+  margin: 0 auto 4px;
+  border: 9px solid var(--bright-blue);
+  border-radius: 18px 18px 30px 30px;
+  background: #073f88;
+  box-shadow: inset 0 0 0 5px white;
+}
+
+.washer-logo::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 12px;
+  height: 10px;
+  border-radius: 999px;
+  background: white;
+}
+
+.washer-door {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: 20px;
+  bottom: 10px;
+  border: 6px solid white;
+  border-radius: 50%;
+  background: linear-gradient(150deg, #d9f5ff 0 45%, #1ba4e8 46% 100%);
+}
+
+.bubble {
+  position: absolute;
+  border: 4px solid var(--bright-blue);
+  border-radius: 50%;
+  background: white;
+}
+
+.bubble-one { width: 18px; height: 18px; right: -24px; top: 10px; }
+.bubble-two { width: 12px; height: 12px; right: -36px; top: 42px; }
+.bubble-three { width: 14px; height: 14px; left: -28px; top: 23px; }
+
+.brand-script {
+  margin: -4px 0 -10px;
+  font-family: "Pacifico", cursive;
+  font-size: clamp(2.25rem, 7vw, 4.8rem);
+  color: var(--bright-blue);
+  line-height: 1;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 7vw, 5rem);
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+  color: var(--navy);
+}
+
+.tagline {
+  margin: 15px 0 0;
+  font-size: clamp(.75rem, 2.2vw, 1.15rem);
+  font-weight: 800;
+  letter-spacing: .18em;
+  color: var(--bright-blue);
+}
+
+.portal-card {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 32px), 850px);
+  margin: -58px auto 24px;
+  padding: clamp(27px, 5vw, 54px);
+  border-radius: 38px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.wifi-mark {
+  width: 66px;
+  height: 66px;
+  margin: -8px auto 6px;
+  display: grid;
+  place-items: center;
+  color: var(--bright-blue);
+  font-size: 4rem;
+  font-weight: 800;
+  transform: rotate(90deg);
+}
+
+.portal-card h2 {
+  margin: 0;
+  font-size: clamp(1.85rem, 5.5vw, 3.4rem);
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+}
+
+.lead {
+  margin: 22px 0 8px;
+  font-size: clamp(1.25rem, 3.4vw, 1.85rem);
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.intro {
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+.field-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.field-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.field-group input {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 16px;
+  border: 2px solid #c8d5e3;
+  border-radius: 13px;
+  font: inherit;
+  color: var(--ink);
+  background: white;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: var(--bright-blue);
+  box-shadow: 0 0 0 4px rgba(25, 136, 232, .14);
+}
+
+.terms-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  margin: 22px 0 18px;
+  padding: 22px;
+  border: 2px solid var(--line-blue);
+  border-radius: 18px;
+  background: #f3f9ff;
+  text-align: left;
+}
+
+.shield {
+  width: 58px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  border: 5px solid var(--navy);
+  border-radius: 30px 30px 40px 40px;
+  background: linear-gradient(145deg, #2498e8, #063d84);
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.terms-box h3,
+.reminder h3 {
+  margin: 0 0 5px;
+  color: var(--navy);
+}
+
+.terms-box p,
+.reminder p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.check-row {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin: 14px 0 0;
+  text-align: left;
+  line-height: 1.45;
+}
+
+.check-row input {
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  accent-color: var(--bright-blue);
+}
+
+.check-row.optional {
+  color: var(--muted);
+  font-size: .94rem;
+}
+
+button {
+  width: 100%;
+  min-height: 66px;
+  margin-top: 25px;
+  border: 0;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: white;
+  background: linear-gradient(180deg, #2089e7, #0967c4);
+  box-shadow: 0 7px 0 #064f9e, 0 12px 25px rgba(11, 103, 196, .25);
+  font: inherit;
+  font-size: clamp(1.15rem, 3.5vw, 1.55rem);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .16s, filter .16s, box-shadow .16s;
+}
+
+button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 3px 0 #064f9e, 0 7px 14px rgba(11, 103, 196, .2);
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: .75;
+}
+
+.button-icon {
+  font-size: 1.4rem;
+}
+
+.field-error {
+  min-height: 1.1em;
+  margin: 6px 0 0;
+  color: #b42318;
+  font-size: .87rem;
+  font-weight: 600;
+}
+
+.form-status {
+  min-height: 1.3em;
+  margin: 15px 0 0;
+  font-weight: 700;
+}
+
+.form-status.success { color: #08763b; }
+.form-status.error { color: #b42318; }
+
+.reminder {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-top: 30px;
+  padding: 22px;
+  border-radius: 20px;
+  background: #e5f2ff;
+  text-align: left;
+}
+
+.basket-icon {
+  width: 62px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border: 4px solid var(--navy);
+  border-radius: 9px 9px 16px 16px;
+  color: var(--navy);
+  background: linear-gradient(#fff 0 35%, #1b8fe4 36%);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.portal-links {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  padding: 20px 16px 30px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+footer strong {
+  font-size: 1.2rem;
+}
+
+footer em {
+  color: #7cc7ff;
+  font-weight: 600;
+}
+
+.legal-page {
+  width: min(calc(100% - 28px), 850px);
+  margin: 32px auto;
+  padding: clamp(26px, 5vw, 52px);
+  border-radius: 24px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.legal-page h1,
+.legal-page h2 {
+  color: var(--navy);
+}
+
+.legal-page p,
+.legal-page li {
+  line-height: 1.7;
+  color: #354960;
+}
+
+@media (max-width: 620px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .hero {
+    min-height: 295px;
+    padding-top: 32px;
+  }
+
+  .portal-card {
+    width: calc(100% - 20px);
+    margin-top: -48px;
+    border-radius: 25px;
+  }
+
+  .terms-box,
+  .reminder {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .shield,
+  .basket-icon {
+    margin: 0 auto;
+  }
+
+  .brand-script {
+    font-size: 2.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
