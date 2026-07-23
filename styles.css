@@ -810,51 +810,108 @@ footer em {
     margin-top:12px;
 }
 
-.social-links a{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    text-decoration:none;
-    transition:all .25s ease;
-    box-shadow:0 4px 10px rgba(0,0,0,.12);
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    margin-top: 14px;
 }
 
-.social-links svg{
-    width:24px;
-    height:24px;
-    fill:#fff;
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: none;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.social-links svg {
+    width: 32px;
+    height: 32px;
 }
 
 /* Facebook */
-.social-links a.facebook{
-    background:#1877F2;
-}
-
-/* X */
-.social-links a.x{
-    background:#000000;
+.social-links a.facebook {
+    background: #4267f5;
 }
 
 /* Instagram */
-.social-links a.instagram{
-    background:linear-gradient(
-        45deg,
-        #F58529,
-        #FEDA77,
-        #DD2A7B,
-        #8134AF,
-        #515BD4
-    );
+.social-links a.instagram {
+    background: #d93669;
+}
+
+/* X */
+.social-links a.x {
+    background: #1f1f1f;
 }
 
 /* Yelp */
-.social-links a.yelp{
-    background:#D32323;
+.social-links a.yelp {
+    background: #d62d27;
 }
 
-.social-links a:hover{
-    transform:translateY(-4px) scale(1.08);
+.social-links a:hover {
+    transform: translateY(-3px);
+    opacity: .9;
+}/* Social footer card */
+
+/* Add the mobile version HERE */
+@media (max-width: 480px) {
+    .social-links {
+        gap: 20px;
+    }
+
+    .social-links a {
+        width: 54px;
+        height: 54px;
+    }
+
+    .social-links svg {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+footer {
+  margin-top: 40px;
+  padding: 28px 22px 32px;
+  background: #eef5ff;
+  border: 1px solid rgba(45, 108, 223, 0.08);
+  border-radius: 22px;
+  text-align: center;
+}
+
+footer > strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+footer > span {
+  display: block;
+  margin-bottom: 18px;
+  color: #6b7785;
+}
+
+.footer-title {
+  margin: 0 0 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7785;
+}
+
+footer > strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1d4fa8;
 }
