@@ -915,3 +915,102 @@ footer > strong {
     font-weight: 800;
     color: #1d4fa8;
 }
+
+/* ==========================================
+   FINAL FOOTER OVERRIDES
+   Keep this at the bottom of styles.css
+========================================== */
+
+footer {
+    margin-top: 40px !important;
+    padding: 28px 22px 32px !important;
+
+    /* Replace this with the exact Store Hours background */
+    background: #fff9e7 !important;
+
+    border: 1px solid #ead99a !important;
+    border-radius: 22px !important;
+    text-align: center !important;
+}
+
+footer > strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #1d2b3a !important;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+footer > span {
+    display: block;
+    margin-bottom: 18px;
+    color: #5f6f82 !important;
+}
+
+.footer-title {
+    margin: 0 0 14px;
+    color: #6b7785 !important;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    margin-top: 14px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #ffffff !important;
+    text-decoration: none;
+    box-shadow: none !important;
+}
+
+.social-links a.facebook {
+    background: #4267f5 !important;
+}
+
+.social-links a.instagram {
+    background: #d93669 !important;
+}
+
+.social-links a.x {
+    background: #1f1f1f !important;
+}
+
+.social-links a.yelp {
+    background: #d62d27 !important;
+}
+
+.social-links svg {
+    width: 32px;
+    height: 32px;
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+.social-links svg path {
+    fill: #ffffff !important;
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 20px;
+    }
+
+    .social-links a {
+        width: 54px;
+        height: 54px;
+    }
+
+    .social-links svg {
+        width: 29px;
+        height: 29px;
+    }
+}
