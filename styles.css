@@ -446,10 +446,10 @@ a {
 .eyebrow {
   margin-bottom: 4px !important;
   color: var(--blue) !important;
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 1.15rem;
+    font-weight: 1200;
+    letter-spacing: .08em;
+    color: #1d4fa8;
 }
 
 .review-card {
