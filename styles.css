@@ -799,7 +799,7 @@ footer em {
     position: relative;
     margin-top: 30px;
     min-height: 120px;
-    padding: 24px 90px 22px;
+    padding: 24px 28px;
     overflow: hidden;
 
     background:
@@ -862,48 +862,6 @@ footer em {
     font-weight: 700;
 }
 
-/* Share button */
-.share-button {
-    position: absolute;
-    z-index: 3;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 54px;
-    height: 54px;
-    padding: 0;
-
-    background: rgba(8, 31, 73, .65);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-
-    transition:
-        transform .2s ease,
-        background .2s ease;
-}
-
-.share-button svg {
-    width: 29px;
-    height: 29px;
-
-    fill: none;
-    stroke: #ffffff;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.share-button:hover {
-    background: rgba(29, 79, 168, .9);
-    transform: translateY(-50%) scale(1.06);
-}
-
 /* Decorative bubbles */
 .footer-bubbles {
     position: absolute;
@@ -921,7 +879,7 @@ footer em {
 }
 
 .bubbles-right {
-    right: 90px;
+    right: 30px;
 }
 
 .footer-bubbles span {
