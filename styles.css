@@ -790,227 +790,241 @@ footer em {
 
 /* ==========================================
    SOCIAL FOOTER
-========================================== */
-
-.footer-title {
-    margin-top: 14px;
-    margin-bottom: 12px;
-    font-size: .8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: #6b7785;
-}
-
-.social-links{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:18px;
-    margin-top:12px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 34px;
-    margin-top: 14px;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: #ffffff;
-    text-decoration: none;
-    box-shadow: none;
-    transition: transform .2s ease, opacity .2s ease;
-}
-
-.social-links svg {
-    width: 32px;
-    height: 32px;
-}
-
-/* Facebook */
-.social-links a.facebook {
-    background: #4267f5;
-}
-
-/* Instagram */
-.social-links a.instagram {
-    background: #d93669;
-}
-
-/* X */
-.social-links a.x {
-    background: #1f1f1f;
-}
-
-/* Yelp */
-.social-links a.yelp {
-    background: #d62d27;
-}
-
-.social-links a:hover {
-    transform: translateY(-3px);
-    opacity: .9;
-}/* Social footer card */
-
-/* Add the mobile version HERE */
-@media (max-width: 480px) {
-    .social-links {
-        gap: 20px;
-    }
-
-    .social-links a {
-        width: 54px;
-        height: 54px;
-    }
-
-    .social-links svg {
-        width: 29px;
-        height: 29px;
-    }
-}
-
-footer {
-  margin-top: 40px;
-  padding: 28px 22px 32px;
-  background: #eef5ff;
-  border: 1px solid rgba(45, 108, 223, 0.08);
-  border-radius: 22px;
-  text-align: center;
-}
-
-footer > strong {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 1.1rem;
-}
-
-footer > span {
-  display: block;
-  margin-bottom: 18px;
-  color: #6b7785;
-}
-
-.footer-title {
-  margin: 0 0 14px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #6b7785;
-}
-
-footer > strong {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: #1d4fa8;
-}
-
+==
 /* ==========================================
-   FINAL FOOTER OVERRIDES
-   Keep this at the bottom of styles.css
+   FINAL PORTAL FOOTER
 ========================================== */
 
-footer {
-    margin-top: 40px !important;
-    padding: 28px 22px 32px !important;
+.portal-footer {
+    position: relative;
+    margin-top: 30px;
+    min-height: 120px;
+    padding: 24px 90px 22px;
+    overflow: hidden;
 
-    /* Replace this with the exact Store Hours background */
-    background: #fff9e7 !important;
+    background:
+        linear-gradient(
+            180deg,
+            #12336e 0%,
+            #0b285b 100%
+        );
 
-    border: 1px solid #ead99a !important;
-    border-radius: 22px !important;
-    text-align: center !important;
+    border: none;
+    border-radius: 0 0 48px 48px;
+    text-align: center;
+    box-shadow: none;
 }
 
-footer > strong {
+.footer-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal-footer .footer-content strong {
     display: block;
-    margin-bottom: 4px;
-    color: #1d2b3a !important;
+    margin: 0 0 5px;
+
+    color: #ffffff !important;
     font-size: 1.15rem;
     font-weight: 800;
+    line-height: 1.2;
 }
 
-footer > span {
-    display: block;
-    margin-bottom: 18px;
-    color: #5f6f82 !important;
-}
-
-.footer-title {
-    margin: 0 0 14px;
-    color: #6b7785 !important;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 34px;
-    margin-top: 14px;
-}
-
-.social-links a {
-    display: flex;
+.footer-location {
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    gap: 5px;
+
+    margin: 0 0 4px !important;
+    color: #d7e4f8 !important;
+    font-size: 1rem;
+}
+
+.footer-location svg {
+    width: 18px;
+    height: 18px;
+    fill: #5ca0f2;
+}
+
+.footer-tagline {
+    display: block !important;
+    margin: 0 !important;
+
+    color: #58a2ef !important;
+    font-size: .98rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Share button */
+.share-button {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+    padding: 0;
+
+    background: rgba(8, 31, 73, .65);
+    border: none;
     border-radius: 50%;
-    color: #ffffff !important;
-    text-decoration: none;
-    box-shadow: none !important;
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
 }
 
-.social-links a.facebook {
-    background: #4267f5 !important;
+.share-button svg {
+    width: 29px;
+    height: 29px;
+
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.social-links a.instagram {
-    background: #d93669 !important;
+.share-button:hover {
+    background: rgba(29, 79, 168, .9);
+    transform: translateY(-50%) scale(1.06);
 }
 
-.social-links a.x {
-    background: #1f1f1f !important;
+/* Decorative bubbles */
+.footer-bubbles {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+
+    width: 130px;
+    height: 80px;
+
+    pointer-events: none;
 }
 
-.social-links a.yelp {
-    background: #d62d27 !important;
+.bubbles-left {
+    left: 35px;
 }
 
-.social-links svg {
-    width: 32px;
-    height: 32px;
-    color: #ffffff !important;
-    fill: #ffffff !important;
+.bubbles-right {
+    right: 90px;
 }
 
-.social-links svg path {
-    fill: #ffffff !important;
+.footer-bubbles span {
+    position: absolute;
+
+    display: block;
+    width: 14px;
+    height: 14px;
+
+    border: 1px solid rgba(83, 165, 248, .65);
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 32% 28%,
+            rgba(255, 255, 255, .7),
+            rgba(75, 155, 245, .18) 35%,
+            rgba(19, 65, 133, .12) 70%
+        );
+
+    box-shadow:
+        inset 0 0 5px rgba(83, 165, 248, .35),
+        0 0 4px rgba(83, 165, 248, .2);
 }
 
-@media (max-width: 480px) {
-    .social-links {
-        gap: 20px;
+.footer-bubbles span:nth-child(1) {
+    top: 8px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+.footer-bubbles span:nth-child(2) {
+    top: 34px;
+    left: 34px;
+    width: 12px;
+    height: 12px;
+}
+
+.footer-bubbles span:nth-child(3) {
+    top: 13px;
+    left: 62px;
+    width: 8px;
+    height: 8px;
+}
+
+.footer-bubbles span:nth-child(4) {
+    top: 42px;
+    left: 80px;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-bubbles span:nth-child(5) {
+    top: 4px;
+    left: 105px;
+    width: 9px;
+    height: 9px;
+}
+
+@media (max-width: 600px) {
+
+    .portal-footer {
+        min-height: 128px;
+        margin-top: 24px;
+        padding: 24px 68px 24px 24px;
+        border-radius: 22px;
     }
 
-    .social-links a {
-        width: 54px;
-        height: 54px;
+    .portal-footer .footer-content strong {
+        font-size: 1rem;
     }
 
-    .social-links svg {
-        width: 29px;
-        height: 29px;
+    .footer-location {
+        font-size: .9rem;
+    }
+
+    .footer-tagline {
+        font-size: .88rem;
+    }
+
+    .share-button {
+        right: 18px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .share-button svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .bubbles-left {
+        left: 8px;
+        opacity: .55;
+    }
+
+    .bubbles-right {
+        right: 42px;
+        opacity: .45;
+    }
+
+    .footer-bubbles {
+        transform: scale(.75);
     }
 }

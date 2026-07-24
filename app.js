@@ -79,3 +79,26 @@ document.addEventListener("keydown", (event) => {
     hideModal();
   }
 });
+
+function sharePortal() {
+    const shareData = {
+        title: "Lincoln Village Thrifty Wash",
+        text: "Visit Lincoln Village Thrifty Wash in Sacramento, CA.",
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData).catch(() => {
+            // User canceled the share dialog.
+        });
+        return;
+    }
+
+    navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+            alert("Portal link copied to clipboard.");
+        })
+        .catch(() => {
+            alert("Unable to copy the portal link.");
+        });
+}
